@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
    qDebug()<<"Holi xd";
    qDebug()<<"Iloh dx";
-   qDebug()<<"LOL";
+   qDebug()<<"LOLxd";
 }
 
 MainWindow::~MainWindow()
