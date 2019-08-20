@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
    qDebug()<<"Holi xd";
+   qDebug()<<"Iloh dx";
+   qDebug()<<"LOL";
 }
 
 MainWindow::~MainWindow()
