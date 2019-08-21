@@ -18,7 +18,7 @@
 background-color: rgb(255, 255, 255);
 border: 1px solid;
 }
-#Titulo, #barraAdm, #barraVotante, #barraCandidato, #barraPublicaciones, #barraVerUsuarios, #barraInfoCandidato{
+#Titulo, #barraAdm, #barraVotante, #barraCandidato, #barraPublicaciones, #barraVerUsuarios, #barraInfoCandidato, #barraPropuestas, #barraEstadoVotacion{
 background-color: rgb(199, 189, 222);
 border: 1px solid;
 }
@@ -782,8 +782,8 @@ border: 1px solid;
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="page_2">
-         <widget class="QWidget" name="barraInfoCandidato" native="true">
+        <widget class="QWidget" name="page_3">
+         <widget class="QWidget" name="barraEstadoVotacion" native="true">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -792,7 +792,7 @@ border: 1px solid;
             <height>50</height>
            </rect>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_19">
+          <layout class="QHBoxLayout" name="horizontalLayout_23">
            <property name="leftMargin">
             <number>5</number>
            </property>
@@ -806,7 +806,7 @@ border: 1px solid;
             <number>5</number>
            </property>
            <item>
-            <widget class="QPushButton" name="AdmIcono_6">
+            <widget class="QPushButton" name="AdmIcono_7">
              <property name="minimumSize">
               <size>
                <width>40</width>
@@ -825,7 +825,7 @@ border: 1px solid;
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_9">
+            <widget class="QLabel" name="label_14">
              <property name="font">
               <font>
                <family>Lato</family>
@@ -833,12 +833,12 @@ border: 1px solid;
               </font>
              </property>
              <property name="text">
-              <string>Información del candidato</string>
+              <string>Estado actual de la votación</string>
              </property>
             </widget>
            </item>
            <item>
-            <spacer name="horizontalSpacer_27">
+            <spacer name="horizontalSpacer_29">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -850,69 +850,217 @@ border: 1px solid;
              </property>
             </spacer>
            </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="horizontalLayoutWidget_7">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>70</y>
-            <width>671</width>
-            <height>141</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_20">
            <item>
-            <widget class="QFrame" name="frame">
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+            <widget class="QPushButton" name="botonSalir_5">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
              </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
              </property>
             </widget>
            </item>
-           <item>
-            <layout class="QGridLayout" name="gridLayout">
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_11">
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_2">
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QWidget" name="barraInfoCandidato" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_19">
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="AdmIcono_6">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
                <property name="text">
-                <string>Nombre:</string>
+                <string/>
                </property>
               </widget>
              </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_10">
+             <item>
+              <widget class="QLabel" name="label_9">
+               <property name="font">
+                <font>
+                 <family>Lato</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
                <property name="text">
-                <string>Datos del candidato</string>
+                <string>Información del candidato</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_12">
+             <item>
+              <spacer name="horizontalSpacer_27">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_20">
+            <item>
+             <widget class="QFrame" name="frame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>Nombre:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>Datos del candidato</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>Partido de afiliación:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="etiquetaNombreCand">
+                <property name="text">
+                 <string>Info</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="etiquetaPartidoAfil">
+                <property name="text">
+                 <string>Info</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QWidget" name="barraPropuestas" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_21">
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_13">
+               <property name="font">
+                <font>
+                 <family>Lato</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
                <property name="text">
-                <string>Partido de afiliación:</string>
+                <string>Propuestas</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="1">
-              <widget class="QLabel" name="etiquetaNombreCand">
-               <property name="text">
-                <string>Info</string>
+             <item>
+              <spacer name="horizontalSpacer_28">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
                </property>
-              </widget>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
-             <item row="2" column="1">
-              <widget class="QLabel" name="etiquetaPartidoAfil">
+             <item>
+              <widget class="QPushButton" name="botonSalir_2">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
                <property name="text">
-                <string>Info</string>
+                <string/>
                </property>
               </widget>
              </item>
             </layout>
-           </item>
-          </layout>
-         </widget>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_22">
+            <item>
+             <widget class="QTableView" name="tableView_4"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </widget>
         <widget class="QWidget" name="page">
          <layout class="QVBoxLayout" name="verticalLayout_10">
