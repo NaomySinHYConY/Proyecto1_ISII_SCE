@@ -41,16 +41,22 @@ void MainWindow::on_Ingresar_clicked()
     QString u = ui->lineEditUsuario->text();
     QString c = ui->lineEditContra->text();
 
-    QSqlQuery us("SELECT usuario FROM usuario;");
+    QSqlQuery us("call usp_usuario('"+u+"');");
     us.first();
     QString usuario = us.value(0).toString();
     qDebug() << usuario;
 
-    QSqlQuery co("SELECT contrasegna FROM usuario;");
+    QSqlQuery co("call usp_contra('"+u+"', "+c+")");
     co.first();
     QString contr = co.value(0).toString();
+    qDebug() << contr;
 
-    if(u==usuario && c==contr){
+    QSqlQuery rol("call usp_rol('"+u+"');");
+    rol.first();
+    int r = rol.value(0).toInt();
+    qDebug() << contr;
+
+    if(u==usuario && c==contr && r==1){
         ui->Fondo->setCurrentIndex(1);
     }else{
         QMessageBox::information(this, "Incorrecta", "Incorrecta",
