@@ -19,14 +19,35 @@ background-color: rgb(255, 255, 255);
 border: 1px solid;
 }
 #Titulo, #barraAdm, #barraVotante, #barraCandidato, #barraPublicaciones, #barraVerUsuarios, #barraInfoCandidato, #barraPropuestas, #barraEstadoVotacion{
-background-color: rgb(199, 189, 222);
+background-color: rgba(199, 189, 222,150);
 border: 1px solid;
+border-radius: 5px;
 }
-
 #CuadroLogin{
 border: 1px solid;
+background-color: rgba(0, 0, 0, 15);
+border-radius: 5px;
 }
-</string>
+QLineEdit{
+border: 1px solid;
+border-radius: 3px;
+}
+QPushButton{
+border: 1px solid;
+border-radius: 5px;
+padding-top: 5px;
+padding-right: 5px;
+padding-bottom: 5px;
+padding-left: 5px;
+background-color: rgba(199, 189, 222,150);
+font: &quot;Lato&quot;;
+}
+QPushButton:hover{
+background-color: rgb(199, 189, 222);
+}
+QPushButton:pressed{
+background-color: rgb(255, 255, 255);
+}</string>
   </property>
   <property name="iconSize">
    <size>
@@ -74,40 +95,36 @@ border: 1px solid;
          <bool>true</bool>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>6</number>
         </property>
         <widget class="QWidget" name="login">
          <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="leftMargin">
+           <number>1</number>
+          </property>
+          <property name="topMargin">
+           <number>1</number>
+          </property>
+          <property name="rightMargin">
+           <number>1</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_3">
             <property name="leftMargin">
-             <number>5</number>
+             <number>0</number>
             </property>
             <property name="topMargin">
-             <number>5</number>
+             <number>0</number>
             </property>
             <property name="rightMargin">
-             <number>5</number>
+             <number>0</number>
             </property>
             <property name="bottomMargin">
-             <number>5</number>
+             <number>0</number>
             </property>
-            <item>
-             <spacer name="verticalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>40</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
             <item>
              <widget class="QWidget" name="Titulo" native="true">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -480,6 +497,15 @@ border: 1px solid;
         </widget>
         <widget class="QWidget" name="MenuAdm">
          <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
           <item>
            <widget class="QWidget" name="barraAdm" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -496,7 +522,26 @@ border: 1px solid;
               <number>5</number>
              </property>
              <item>
+              <spacer name="horizontalSpacer_33">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
               <widget class="QPushButton" name="AdmIcono">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
                <property name="minimumSize">
                 <size>
                  <width>40</width>
@@ -620,9 +665,15 @@ border: 1px solid;
                <widget class="QPushButton" name="botonNuevoProceso">
                 <property name="minimumSize">
                  <size>
-                  <width>150</width>
-                  <height>50</height>
+                  <width>250</width>
+                  <height>100</height>
                  </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Lato</family>
+                  <pointsize>16</pointsize>
+                 </font>
                 </property>
                 <property name="text">
                  <string>Nuevo proceso electoral</string>
@@ -646,9 +697,15 @@ border: 1px solid;
                <widget class="QPushButton" name="botonInspeccionar">
                 <property name="minimumSize">
                  <size>
-                  <width>150</width>
-                  <height>50</height>
+                  <width>250</width>
+                  <height>100</height>
                  </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Lato</family>
+                  <pointsize>16</pointsize>
+                 </font>
                 </property>
                 <property name="text">
                  <string>Inspeccionar proceso</string>
@@ -714,9 +771,14 @@ border: 1px solid;
                <widget class="QPushButton" name="botonVerUsuarios">
                 <property name="minimumSize">
                  <size>
-                  <width>150</width>
-                  <height>50</height>
+                  <width>250</width>
+                  <height>100</height>
                  </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>16</pointsize>
+                 </font>
                 </property>
                 <property name="text">
                  <string>Ver usuarios</string>
@@ -740,9 +802,14 @@ border: 1px solid;
                <widget class="QPushButton" name="botonModerar">
                 <property name="minimumSize">
                  <size>
-                  <width>150</width>
-                  <height>50</height>
+                  <width>250</width>
+                  <height>100</height>
                  </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>16</pointsize>
+                 </font>
                 </property>
                 <property name="text">
                  <string>Moderar publicaciones</string>
@@ -783,6 +850,15 @@ border: 1px solid;
         </widget>
         <widget class="QWidget" name="infoCandidato">
          <layout class="QVBoxLayout" name="verticalLayout_11">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
           <item>
            <widget class="QWidget" name="barraInfoCandidato" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -798,6 +874,22 @@ border: 1px solid;
              <property name="bottomMargin">
               <number>5</number>
              </property>
+             <item>
+              <spacer name="horizontalSpacer_32">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
              <item>
               <widget class="QPushButton" name="AdmIcono_6">
                <property name="minimumSize">
@@ -915,6 +1007,22 @@ border: 1px solid;
               <number>5</number>
              </property>
              <item>
+              <spacer name="horizontalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
               <widget class="QLabel" name="label_13">
                <property name="font">
                 <font>
@@ -959,6 +1067,22 @@ border: 1px solid;
                </property>
               </widget>
              </item>
+             <item>
+              <spacer name="horizontalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
             </layout>
            </widget>
           </item>
@@ -973,6 +1097,15 @@ border: 1px solid;
         </widget>
         <widget class="QWidget" name="page">
          <layout class="QVBoxLayout" name="verticalLayout_10">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
           <item>
            <widget class="QWidget" name="barraVerUsuarios" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_14">
@@ -988,6 +1121,22 @@ border: 1px solid;
              <property name="bottomMargin">
               <number>5</number>
              </property>
+             <item>
+              <spacer name="horizontalSpacer_31">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
              <item>
               <widget class="QPushButton" name="AdmIcono_5">
                <property name="minimumSize">
@@ -1084,6 +1233,22 @@ border: 1px solid;
               </property>
              </widget>
             </item>
+            <item>
+             <spacer name="horizontalSpacer_29">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </item>
           <item>
@@ -1134,12 +1299,37 @@ border: 1px solid;
               </property>
              </widget>
             </item>
+            <item>
+             <spacer name="horizontalSpacer_30">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </item>
          </layout>
         </widget>
         <widget class="QWidget" name="ModerarPublicaciones">
          <layout class="QVBoxLayout" name="verticalLayout_9">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
           <item>
            <widget class="QWidget" name="barraPublicaciones" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -1155,6 +1345,22 @@ border: 1px solid;
              <property name="bottomMargin">
               <number>5</number>
              </property>
+             <item>
+              <spacer name="horizontalSpacer_34">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
              <item>
               <widget class="QPushButton" name="AdmIcono_2">
                <property name="minimumSize">
@@ -1231,6 +1437,18 @@ border: 1px solid;
             </item>
             <item>
              <widget class="QPushButton" name="botonAceptarPublicacion">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Lato</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>Aceptar</string>
               </property>
@@ -1251,6 +1469,18 @@ border: 1px solid;
             </item>
             <item>
              <widget class="QPushButton" name="botonRechazarPublicacion">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Lato</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>Rechazar</string>
               </property>
@@ -1274,184 +1504,284 @@ border: 1px solid;
          </layout>
         </widget>
         <widget class="QWidget" name="MenuVotante">
-         <widget class="QWidget" name="barraVotante" native="true">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>676</width>
-            <height>50</height>
-           </rect>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <property name="leftMargin">
+           <number>2</number>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_10">
-           <property name="leftMargin">
-            <number>5</number>
-           </property>
-           <property name="topMargin">
-            <number>5</number>
-           </property>
-           <property name="rightMargin">
-            <number>5</number>
-           </property>
-           <property name="bottomMargin">
-            <number>5</number>
-           </property>
-           <item>
-            <widget class="QPushButton" name="AdmIcono_3">
-             <property name="minimumSize">
-              <size>
-               <width>40</width>
-               <height>40</height>
-              </size>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="barraVotante" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <property name="leftMargin">
+              <number>5</number>
              </property>
-             <property name="maximumSize">
-              <size>
-               <width>50</width>
-               <height>50</height>
-              </size>
+             <property name="topMargin">
+              <number>5</number>
              </property>
-             <property name="text">
-              <string/>
+             <property name="rightMargin">
+              <number>5</number>
              </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_6">
-             <property name="font">
-              <font>
-               <family>Lato</family>
-               <pointsize>16</pointsize>
-              </font>
+             <property name="bottomMargin">
+              <number>5</number>
              </property>
-             <property name="text">
-              <string>Votante</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_19">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="botonSalir_3">
-             <property name="minimumSize">
-              <size>
-               <width>40</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>50</width>
-               <height>50</height>
-              </size>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+             <item>
+              <spacer name="horizontalSpacer_35">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AdmIcono_3">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="font">
+                <font>
+                 <family>Lato</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Votante</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_19">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="botonSalir_3">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_36">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </widget>
         <widget class="QWidget" name="menuCandidato">
-         <widget class="QWidget" name="barraCandidato" native="true">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>676</width>
-            <height>50</height>
-           </rect>
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <property name="leftMargin">
+           <number>2</number>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_11">
-           <property name="leftMargin">
-            <number>5</number>
-           </property>
-           <property name="topMargin">
-            <number>5</number>
-           </property>
-           <property name="rightMargin">
-            <number>5</number>
-           </property>
-           <property name="bottomMargin">
-            <number>5</number>
-           </property>
-           <item>
-            <widget class="QPushButton" name="AdmIcono_4">
-             <property name="minimumSize">
-              <size>
-               <width>40</width>
-               <height>40</height>
-              </size>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="barraCandidato" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <property name="leftMargin">
+              <number>5</number>
              </property>
-             <property name="maximumSize">
-              <size>
-               <width>50</width>
-               <height>50</height>
-              </size>
+             <property name="topMargin">
+              <number>5</number>
              </property>
-             <property name="text">
-              <string/>
+             <property name="rightMargin">
+              <number>5</number>
              </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_7">
-             <property name="font">
-              <font>
-               <family>Lato</family>
-               <pointsize>16</pointsize>
-              </font>
+             <property name="bottomMargin">
+              <number>5</number>
              </property>
-             <property name="text">
-              <string>Candidato</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_20">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="botonSalir_4">
-             <property name="minimumSize">
-              <size>
-               <width>40</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>50</width>
-               <height>50</height>
-              </size>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+             <item>
+              <spacer name="horizontalSpacer_37">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AdmIcono_4">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="font">
+                <font>
+                 <family>Lato</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Candidato</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_20">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="botonSalir_4">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_38">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </widget>
        </widget>
       </item>

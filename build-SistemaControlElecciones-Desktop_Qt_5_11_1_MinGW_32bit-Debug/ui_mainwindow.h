@@ -37,7 +37,6 @@ public:
     QWidget *login;
     QVBoxLayout *verticalLayout_4;
     QVBoxLayout *verticalLayout_3;
-    QSpacerItem *verticalSpacer_2;
     QWidget *Titulo;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer;
@@ -69,6 +68,7 @@ public:
     QVBoxLayout *verticalLayout_7;
     QWidget *barraAdm;
     QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *horizontalSpacer_33;
     QPushButton *AdmIcono;
     QLabel *label_4;
     QSpacerItem *horizontalSpacer_11;
@@ -89,17 +89,11 @@ public:
     QPushButton *botonModerar;
     QSpacerItem *horizontalSpacer_16;
     QSpacerItem *verticalSpacer_5;
-    QWidget *page_3;
-    QWidget *barraEstadoVotacion;
-    QHBoxLayout *horizontalLayout_23;
-    QPushButton *AdmIcono_7;
-    QLabel *label_14;
-    QSpacerItem *horizontalSpacer_29;
-    QPushButton *botonSalir_5;
-    QWidget *page_2;
+    QWidget *infoCandidato;
     QVBoxLayout *verticalLayout_11;
     QWidget *barraInfoCandidato;
     QHBoxLayout *horizontalLayout_19;
+    QSpacerItem *horizontalSpacer_32;
     QPushButton *AdmIcono_6;
     QLabel *label_9;
     QSpacerItem *horizontalSpacer_27;
@@ -113,15 +107,18 @@ public:
     QLabel *etiquetaPartidoAfil;
     QWidget *barraPropuestas;
     QHBoxLayout *horizontalLayout_21;
+    QSpacerItem *horizontalSpacer_5;
     QLabel *label_13;
     QSpacerItem *horizontalSpacer_28;
     QPushButton *botonSalir_2;
+    QSpacerItem *horizontalSpacer_6;
     QHBoxLayout *horizontalLayout_22;
     QTableView *tableView_4;
     QWidget *page;
     QVBoxLayout *verticalLayout_10;
     QWidget *barraVerUsuarios;
     QHBoxLayout *horizontalLayout_14;
+    QSpacerItem *horizontalSpacer_31;
     QPushButton *AdmIcono_5;
     QLabel *label_8;
     QSpacerItem *horizontalSpacer_24;
@@ -131,16 +128,19 @@ public:
     QSpacerItem *horizontalSpacer_25;
     QPushButton *botonActualizarPartidos;
     QPushButton *botonMasInfo;
+    QSpacerItem *horizontalSpacer_29;
     QHBoxLayout *horizontalLayout_17;
     QTableView *tableView_3;
     QHBoxLayout *horizontalLayout_18;
     QSpacerItem *horizontalSpacer_26;
     QPushButton *pushButton_4;
     QPushButton *pushButton_3;
+    QSpacerItem *horizontalSpacer_30;
     QWidget *ModerarPublicaciones;
     QVBoxLayout *verticalLayout_9;
     QWidget *barraPublicaciones;
     QHBoxLayout *horizontalLayout_9;
+    QSpacerItem *horizontalSpacer_34;
     QPushButton *AdmIcono_2;
     QLabel *label_5;
     QSpacerItem *horizontalSpacer_18;
@@ -154,19 +154,27 @@ public:
     QPushButton *botonRechazarPublicacion;
     QSpacerItem *horizontalSpacer_23;
     QWidget *MenuVotante;
+    QVBoxLayout *verticalLayout_5;
     QWidget *barraVotante;
     QHBoxLayout *horizontalLayout_10;
+    QSpacerItem *horizontalSpacer_35;
     QPushButton *AdmIcono_3;
     QLabel *label_6;
     QSpacerItem *horizontalSpacer_19;
     QPushButton *botonSalir_3;
+    QSpacerItem *horizontalSpacer_36;
+    QSpacerItem *verticalSpacer_2;
     QWidget *menuCandidato;
+    QVBoxLayout *verticalLayout_13;
     QWidget *barraCandidato;
     QHBoxLayout *horizontalLayout_11;
+    QSpacerItem *horizontalSpacer_37;
     QPushButton *AdmIcono_4;
     QLabel *label_7;
     QSpacerItem *horizontalSpacer_20;
     QPushButton *botonSalir_4;
+    QSpacerItem *horizontalSpacer_38;
+    QSpacerItem *verticalSpacer_8;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -178,14 +186,35 @@ public:
 "border: 1px solid;\n"
 "}\n"
 "#Titulo, #barraAdm, #barraVotante, #barraCandidato, #barraPublicaciones, #barraVerUsuarios, #barraInfoCandidato, #barraPropuestas, #barraEstadoVotacion{\n"
-"background-color: rgb(199, 189, 222);\n"
+"background-color: rgba(199, 189, 222,150);\n"
 "border: 1px solid;\n"
+"border-radius: 5px;\n"
 "}\n"
-"\n"
 "#CuadroLogin{\n"
 "border: 1px solid;\n"
+"background-color: rgba(0, 0, 0, 15);\n"
+"border-radius: 5px;\n"
 "}\n"
-""));
+"QLineEdit{\n"
+"border: 1px solid;\n"
+"border-radius: 3px;\n"
+"}\n"
+"QPushButton{\n"
+"border: 1px solid;\n"
+"border-radius: 5px;\n"
+"padding-top: 5px;\n"
+"padding-right: 5px;\n"
+"padding-bottom: 5px;\n"
+"padding-left: 5px;\n"
+"background-color: rgba(199, 189, 222,150);\n"
+"font: \"Lato\";\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color: rgb(199, 189, 222);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(255, 255, 255);\n"
+"}"));
         MainWindow->setIconSize(QSize(24, 24));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
@@ -207,14 +236,11 @@ public:
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setContentsMargins(11, 11, 11, 11);
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        verticalLayout_4->setContentsMargins(1, 1, 1, 5);
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        verticalLayout_3->setContentsMargins(5, 5, 5, 5);
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        verticalLayout_3->addItem(verticalSpacer_2);
-
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         Titulo = new QWidget(login);
         Titulo->setObjectName(QStringLiteral("Titulo"));
         horizontalLayout_2 = new QHBoxLayout(Titulo);
@@ -379,6 +405,7 @@ public:
         verticalLayout_7->setSpacing(6);
         verticalLayout_7->setContentsMargins(11, 11, 11, 11);
         verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
+        verticalLayout_7->setContentsMargins(2, 2, 2, -1);
         barraAdm = new QWidget(MenuAdm);
         barraAdm->setObjectName(QStringLiteral("barraAdm"));
         horizontalLayout_7 = new QHBoxLayout(barraAdm);
@@ -386,8 +413,13 @@ public:
         horizontalLayout_7->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
         horizontalLayout_7->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_33 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_33);
+
         AdmIcono = new QPushButton(barraAdm);
         AdmIcono->setObjectName(QStringLiteral("AdmIcono"));
+        AdmIcono->setEnabled(false);
         AdmIcono->setMinimumSize(QSize(40, 40));
         AdmIcono->setMaximumSize(QSize(50, 50));
 
@@ -434,7 +466,8 @@ public:
 
         botonNuevoProceso = new QPushButton(MenuAdm);
         botonNuevoProceso->setObjectName(QStringLiteral("botonNuevoProceso"));
-        botonNuevoProceso->setMinimumSize(QSize(150, 50));
+        botonNuevoProceso->setMinimumSize(QSize(250, 100));
+        botonNuevoProceso->setFont(font3);
 
         horizontalLayout_6->addWidget(botonNuevoProceso);
 
@@ -444,7 +477,8 @@ public:
 
         botonInspeccionar = new QPushButton(MenuAdm);
         botonInspeccionar->setObjectName(QStringLiteral("botonInspeccionar"));
-        botonInspeccionar->setMinimumSize(QSize(150, 50));
+        botonInspeccionar->setMinimumSize(QSize(250, 100));
+        botonInspeccionar->setFont(font3);
 
         horizontalLayout_6->addWidget(botonInspeccionar);
 
@@ -469,7 +503,10 @@ public:
 
         botonVerUsuarios = new QPushButton(MenuAdm);
         botonVerUsuarios->setObjectName(QStringLiteral("botonVerUsuarios"));
-        botonVerUsuarios->setMinimumSize(QSize(150, 50));
+        botonVerUsuarios->setMinimumSize(QSize(250, 100));
+        QFont font4;
+        font4.setPointSize(16);
+        botonVerUsuarios->setFont(font4);
 
         horizontalLayout_8->addWidget(botonVerUsuarios);
 
@@ -479,7 +516,8 @@ public:
 
         botonModerar = new QPushButton(MenuAdm);
         botonModerar->setObjectName(QStringLiteral("botonModerar"));
-        botonModerar->setMinimumSize(QSize(150, 50));
+        botonModerar->setMinimumSize(QSize(250, 100));
+        botonModerar->setFont(font4);
 
         horizontalLayout_8->addWidget(botonModerar);
 
@@ -498,54 +536,24 @@ public:
         verticalLayout_7->addItem(verticalSpacer_5);
 
         Fondo->addWidget(MenuAdm);
-        page_3 = new QWidget();
-        page_3->setObjectName(QStringLiteral("page_3"));
-        barraEstadoVotacion = new QWidget(page_3);
-        barraEstadoVotacion->setObjectName(QStringLiteral("barraEstadoVotacion"));
-        barraEstadoVotacion->setGeometry(QRect(10, 10, 676, 50));
-        horizontalLayout_23 = new QHBoxLayout(barraEstadoVotacion);
-        horizontalLayout_23->setSpacing(6);
-        horizontalLayout_23->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_23->setObjectName(QStringLiteral("horizontalLayout_23"));
-        horizontalLayout_23->setContentsMargins(5, 5, 5, 5);
-        AdmIcono_7 = new QPushButton(barraEstadoVotacion);
-        AdmIcono_7->setObjectName(QStringLiteral("AdmIcono_7"));
-        AdmIcono_7->setMinimumSize(QSize(40, 40));
-        AdmIcono_7->setMaximumSize(QSize(50, 50));
-
-        horizontalLayout_23->addWidget(AdmIcono_7);
-
-        label_14 = new QLabel(barraEstadoVotacion);
-        label_14->setObjectName(QStringLiteral("label_14"));
-        label_14->setFont(font3);
-
-        horizontalLayout_23->addWidget(label_14);
-
-        horizontalSpacer_29 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_23->addItem(horizontalSpacer_29);
-
-        botonSalir_5 = new QPushButton(barraEstadoVotacion);
-        botonSalir_5->setObjectName(QStringLiteral("botonSalir_5"));
-        botonSalir_5->setMinimumSize(QSize(40, 40));
-        botonSalir_5->setMaximumSize(QSize(50, 50));
-
-        horizontalLayout_23->addWidget(botonSalir_5);
-
-        Fondo->addWidget(page_3);
-        page_2 = new QWidget();
-        page_2->setObjectName(QStringLiteral("page_2"));
-        verticalLayout_11 = new QVBoxLayout(page_2);
+        infoCandidato = new QWidget();
+        infoCandidato->setObjectName(QStringLiteral("infoCandidato"));
+        verticalLayout_11 = new QVBoxLayout(infoCandidato);
         verticalLayout_11->setSpacing(6);
         verticalLayout_11->setContentsMargins(11, 11, 11, 11);
         verticalLayout_11->setObjectName(QStringLiteral("verticalLayout_11"));
-        barraInfoCandidato = new QWidget(page_2);
+        verticalLayout_11->setContentsMargins(2, 2, 2, -1);
+        barraInfoCandidato = new QWidget(infoCandidato);
         barraInfoCandidato->setObjectName(QStringLiteral("barraInfoCandidato"));
         horizontalLayout_19 = new QHBoxLayout(barraInfoCandidato);
         horizontalLayout_19->setSpacing(6);
         horizontalLayout_19->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_19->setObjectName(QStringLiteral("horizontalLayout_19"));
         horizontalLayout_19->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_32 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_19->addItem(horizontalSpacer_32);
+
         AdmIcono_6 = new QPushButton(barraInfoCandidato);
         AdmIcono_6->setObjectName(QStringLiteral("AdmIcono_6"));
         AdmIcono_6->setMinimumSize(QSize(40, 40));
@@ -569,7 +577,7 @@ public:
         horizontalLayout_20 = new QHBoxLayout();
         horizontalLayout_20->setSpacing(6);
         horizontalLayout_20->setObjectName(QStringLiteral("horizontalLayout_20"));
-        frame = new QFrame(page_2);
+        frame = new QFrame(infoCandidato);
         frame->setObjectName(QStringLiteral("frame"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
@@ -579,27 +587,27 @@ public:
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        label_11 = new QLabel(page_2);
+        label_11 = new QLabel(infoCandidato);
         label_11->setObjectName(QStringLiteral("label_11"));
 
         gridLayout->addWidget(label_11, 1, 0, 1, 1);
 
-        label_10 = new QLabel(page_2);
+        label_10 = new QLabel(infoCandidato);
         label_10->setObjectName(QStringLiteral("label_10"));
 
         gridLayout->addWidget(label_10, 0, 0, 1, 1);
 
-        label_12 = new QLabel(page_2);
+        label_12 = new QLabel(infoCandidato);
         label_12->setObjectName(QStringLiteral("label_12"));
 
         gridLayout->addWidget(label_12, 2, 0, 1, 1);
 
-        etiquetaNombreCand = new QLabel(page_2);
+        etiquetaNombreCand = new QLabel(infoCandidato);
         etiquetaNombreCand->setObjectName(QStringLiteral("etiquetaNombreCand"));
 
         gridLayout->addWidget(etiquetaNombreCand, 1, 1, 1, 1);
 
-        etiquetaPartidoAfil = new QLabel(page_2);
+        etiquetaPartidoAfil = new QLabel(infoCandidato);
         etiquetaPartidoAfil->setObjectName(QStringLiteral("etiquetaPartidoAfil"));
 
         gridLayout->addWidget(etiquetaPartidoAfil, 2, 1, 1, 1);
@@ -610,13 +618,17 @@ public:
 
         verticalLayout_11->addLayout(horizontalLayout_20);
 
-        barraPropuestas = new QWidget(page_2);
+        barraPropuestas = new QWidget(infoCandidato);
         barraPropuestas->setObjectName(QStringLiteral("barraPropuestas"));
         horizontalLayout_21 = new QHBoxLayout(barraPropuestas);
         horizontalLayout_21->setSpacing(6);
         horizontalLayout_21->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_21->setObjectName(QStringLiteral("horizontalLayout_21"));
         horizontalLayout_21->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_21->addItem(horizontalSpacer_5);
+
         label_13 = new QLabel(barraPropuestas);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setFont(font3);
@@ -634,13 +646,17 @@ public:
 
         horizontalLayout_21->addWidget(botonSalir_2);
 
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_21->addItem(horizontalSpacer_6);
+
 
         verticalLayout_11->addWidget(barraPropuestas);
 
         horizontalLayout_22 = new QHBoxLayout();
         horizontalLayout_22->setSpacing(6);
         horizontalLayout_22->setObjectName(QStringLiteral("horizontalLayout_22"));
-        tableView_4 = new QTableView(page_2);
+        tableView_4 = new QTableView(infoCandidato);
         tableView_4->setObjectName(QStringLiteral("tableView_4"));
 
         horizontalLayout_22->addWidget(tableView_4);
@@ -648,13 +664,14 @@ public:
 
         verticalLayout_11->addLayout(horizontalLayout_22);
 
-        Fondo->addWidget(page_2);
+        Fondo->addWidget(infoCandidato);
         page = new QWidget();
         page->setObjectName(QStringLiteral("page"));
         verticalLayout_10 = new QVBoxLayout(page);
         verticalLayout_10->setSpacing(6);
         verticalLayout_10->setContentsMargins(11, 11, 11, 11);
         verticalLayout_10->setObjectName(QStringLiteral("verticalLayout_10"));
+        verticalLayout_10->setContentsMargins(2, 2, 2, -1);
         barraVerUsuarios = new QWidget(page);
         barraVerUsuarios->setObjectName(QStringLiteral("barraVerUsuarios"));
         horizontalLayout_14 = new QHBoxLayout(barraVerUsuarios);
@@ -662,6 +679,10 @@ public:
         horizontalLayout_14->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_14->setObjectName(QStringLiteral("horizontalLayout_14"));
         horizontalLayout_14->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_31 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_14->addItem(horizontalSpacer_31);
+
         AdmIcono_5 = new QPushButton(barraVerUsuarios);
         AdmIcono_5->setObjectName(QStringLiteral("AdmIcono_5"));
         AdmIcono_5->setMinimumSize(QSize(40, 40));
@@ -712,6 +733,10 @@ public:
 
         horizontalLayout_16->addWidget(botonMasInfo);
 
+        horizontalSpacer_29 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_16->addItem(horizontalSpacer_29);
+
 
         verticalLayout_10->addLayout(horizontalLayout_16);
 
@@ -745,6 +770,10 @@ public:
 
         horizontalLayout_18->addWidget(pushButton_3);
 
+        horizontalSpacer_30 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_18->addItem(horizontalSpacer_30);
+
 
         verticalLayout_10->addLayout(horizontalLayout_18);
 
@@ -755,6 +784,7 @@ public:
         verticalLayout_9->setSpacing(6);
         verticalLayout_9->setContentsMargins(11, 11, 11, 11);
         verticalLayout_9->setObjectName(QStringLiteral("verticalLayout_9"));
+        verticalLayout_9->setContentsMargins(2, 2, 2, -1);
         barraPublicaciones = new QWidget(ModerarPublicaciones);
         barraPublicaciones->setObjectName(QStringLiteral("barraPublicaciones"));
         horizontalLayout_9 = new QHBoxLayout(barraPublicaciones);
@@ -762,6 +792,10 @@ public:
         horizontalLayout_9->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
         horizontalLayout_9->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_34 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_34);
+
         AdmIcono_2 = new QPushButton(barraPublicaciones);
         AdmIcono_2->setObjectName(QStringLiteral("AdmIcono_2"));
         AdmIcono_2->setMinimumSize(QSize(40, 40));
@@ -808,6 +842,8 @@ public:
 
         botonAceptarPublicacion = new QPushButton(ModerarPublicaciones);
         botonAceptarPublicacion->setObjectName(QStringLiteral("botonAceptarPublicacion"));
+        botonAceptarPublicacion->setMinimumSize(QSize(150, 0));
+        botonAceptarPublicacion->setFont(font1);
 
         horizontalLayout_12->addWidget(botonAceptarPublicacion);
 
@@ -817,6 +853,8 @@ public:
 
         botonRechazarPublicacion = new QPushButton(ModerarPublicaciones);
         botonRechazarPublicacion->setObjectName(QStringLiteral("botonRechazarPublicacion"));
+        botonRechazarPublicacion->setMinimumSize(QSize(150, 0));
+        botonRechazarPublicacion->setFont(font1);
 
         horizontalLayout_12->addWidget(botonRechazarPublicacion);
 
@@ -830,14 +868,22 @@ public:
         Fondo->addWidget(ModerarPublicaciones);
         MenuVotante = new QWidget();
         MenuVotante->setObjectName(QStringLiteral("MenuVotante"));
+        verticalLayout_5 = new QVBoxLayout(MenuVotante);
+        verticalLayout_5->setSpacing(6);
+        verticalLayout_5->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(2, 2, 2, -1);
         barraVotante = new QWidget(MenuVotante);
         barraVotante->setObjectName(QStringLiteral("barraVotante"));
-        barraVotante->setGeometry(QRect(10, 10, 676, 50));
         horizontalLayout_10 = new QHBoxLayout(barraVotante);
         horizontalLayout_10->setSpacing(6);
         horizontalLayout_10->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
         horizontalLayout_10->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_35 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_35);
+
         AdmIcono_3 = new QPushButton(barraVotante);
         AdmIcono_3->setObjectName(QStringLiteral("AdmIcono_3"));
         AdmIcono_3->setMinimumSize(QSize(40, 40));
@@ -862,17 +908,36 @@ public:
 
         horizontalLayout_10->addWidget(botonSalir_3);
 
+        horizontalSpacer_36 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_36);
+
+
+        verticalLayout_5->addWidget(barraVotante);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_2);
+
         Fondo->addWidget(MenuVotante);
         menuCandidato = new QWidget();
         menuCandidato->setObjectName(QStringLiteral("menuCandidato"));
+        verticalLayout_13 = new QVBoxLayout(menuCandidato);
+        verticalLayout_13->setSpacing(6);
+        verticalLayout_13->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_13->setObjectName(QStringLiteral("verticalLayout_13"));
+        verticalLayout_13->setContentsMargins(2, 2, 2, -1);
         barraCandidato = new QWidget(menuCandidato);
         barraCandidato->setObjectName(QStringLiteral("barraCandidato"));
-        barraCandidato->setGeometry(QRect(10, 10, 676, 50));
         horizontalLayout_11 = new QHBoxLayout(barraCandidato);
         horizontalLayout_11->setSpacing(6);
         horizontalLayout_11->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_11->setObjectName(QStringLiteral("horizontalLayout_11"));
         horizontalLayout_11->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_37 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_11->addItem(horizontalSpacer_37);
+
         AdmIcono_4 = new QPushButton(barraCandidato);
         AdmIcono_4->setObjectName(QStringLiteral("AdmIcono_4"));
         AdmIcono_4->setMinimumSize(QSize(40, 40));
@@ -897,6 +962,17 @@ public:
 
         horizontalLayout_11->addWidget(botonSalir_4);
 
+        horizontalSpacer_38 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_11->addItem(horizontalSpacer_38);
+
+
+        verticalLayout_13->addWidget(barraCandidato);
+
+        verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_13->addItem(verticalSpacer_8);
+
         Fondo->addWidget(menuCandidato);
 
         verticalLayout->addWidget(Fondo);
@@ -908,7 +984,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        Fondo->setCurrentIndex(0);
+        Fondo->setCurrentIndex(6);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -929,9 +1005,6 @@ public:
         botonInspeccionar->setText(QApplication::translate("MainWindow", "Inspeccionar proceso", nullptr));
         botonVerUsuarios->setText(QApplication::translate("MainWindow", "Ver usuarios", nullptr));
         botonModerar->setText(QApplication::translate("MainWindow", "Moderar publicaciones", nullptr));
-        AdmIcono_7->setText(QString());
-        label_14->setText(QApplication::translate("MainWindow", "Estado actual de la votaci\303\263n", nullptr));
-        botonSalir_5->setText(QString());
         AdmIcono_6->setText(QString());
         label_9->setText(QApplication::translate("MainWindow", "Informaci\303\263n del candidato", nullptr));
         label_11->setText(QApplication::translate("MainWindow", "Nombre:", nullptr));

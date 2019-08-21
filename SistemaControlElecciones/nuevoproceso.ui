@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
+    <width>506</width>
     <height>400</height>
    </rect>
   </property>
@@ -48,7 +48,7 @@ border: 1px solid;
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="nuevoProceso">
       <layout class="QVBoxLayout" name="verticalLayout_2">
