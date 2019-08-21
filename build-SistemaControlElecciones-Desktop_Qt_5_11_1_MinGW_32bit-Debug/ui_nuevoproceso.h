@@ -15,9 +15,12 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QTimeEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -28,12 +31,14 @@ class Ui_NuevoProceso
 {
 public:
     QVBoxLayout *verticalLayout;
+    QStackedWidget *stackedWidget;
+    QWidget *page;
+    QVBoxLayout *verticalLayout_2;
     QWidget *barraTitulo;
     QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer_2;
     QLabel *titulo;
     QSpacerItem *horizontalSpacer;
-    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QFormLayout *formLayout;
@@ -48,14 +53,61 @@ public:
     QLabel *label_5;
     QTimeEdit *h_fin;
     QSpacerItem *horizontalSpacer_4;
-    QSpacerItem *verticalSpacer_3;
+    QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_5;
     QPushButton *aceptar;
     QSpacerItem *horizontalSpacer_7;
     QPushButton *cancelar;
     QSpacerItem *horizontalSpacer_6;
-    QSpacerItem *verticalSpacer;
+    QWidget *page_2;
+    QVBoxLayout *verticalLayout_4;
+    QWidget *barraTitulo_2;
+    QHBoxLayout *horizontalLayout_4;
+    QPushButton *pushButton;
+    QLabel *titulo_2;
+    QSpacerItem *horizontalSpacer_9;
+    QSpacerItem *verticalSpacer_3;
+    QVBoxLayout *verticalLayout_3;
+    QHBoxLayout *horizontalLayout_5;
+    QTableView *tableView;
+    QSpacerItem *verticalSpacer_4;
+    QHBoxLayout *horizontalLayout_6;
+    QSpacerItem *horizontalSpacer_8;
+    QPushButton *aceptar_2;
+    QSpacerItem *horizontalSpacer_10;
+    QPushButton *cancelar_2;
+    QSpacerItem *horizontalSpacer_11;
+    QWidget *page_3;
+    QVBoxLayout *verticalLayout_5;
+    QWidget *barraTitulo_3;
+    QHBoxLayout *horizontalLayout_7;
+    QLabel *titulo_3;
+    QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *verticalSpacer_5;
+    QHBoxLayout *horizontalLayout_9;
+    QSpacerItem *horizontalSpacer_15;
+    QFormLayout *formLayout_2;
+    QLabel *label_6;
+    QDateEdit *inicio_2;
+    QLabel *label_7;
+    QDateEdit *cierre_2;
+    QLabel *label_8;
+    QDateEdit *votacion_2;
+    QLabel *label_9;
+    QTimeEdit *h_inicio_2;
+    QLabel *label_10;
+    QTimeEdit *h_fin_2;
+    QSpacerItem *horizontalSpacer_16;
+    QSpacerItem *verticalSpacer_6;
+    QHBoxLayout *horizontalLayout_8;
+    QSpacerItem *horizontalSpacer_12;
+    QPushButton *aceptar_3;
+    QSpacerItem *horizontalSpacer_17;
+    QPushButton *pushButton_2;
+    QSpacerItem *horizontalSpacer_13;
+    QPushButton *cancelar_3;
+    QSpacerItem *horizontalSpacer_14;
 
     void setupUi(QDialog *NuevoProceso)
     {
@@ -68,10 +120,10 @@ public:
 "QPushButton, QDateEdit, QTimeEdit{\n"
 "font: 12pt \"Lato\";\n"
 "}\n"
-"#titulo{\n"
+"#titulo, #titulo_2, #titulo_3{\n"
 "font: 20pt \"Lato\";\n"
 "}\n"
-"#barraTitulo{\n"
+"#barraTitulo, #barraTitulo_2, #barraTitulo_3{\n"
 "background: rgb(199, 189, 222);\n"
 "border: 1px solid;\n"
 "}\n"
@@ -80,15 +132,17 @@ public:
         verticalLayout->setSpacing(1);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(1, 1, 1, 1);
-        barraTitulo = new QWidget(NuevoProceso);
+        stackedWidget = new QStackedWidget(NuevoProceso);
+        stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
+        page = new QWidget();
+        page->setObjectName(QStringLiteral("page"));
+        verticalLayout_2 = new QVBoxLayout(page);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        barraTitulo = new QWidget(page);
         barraTitulo->setObjectName(QStringLiteral("barraTitulo"));
         horizontalLayout = new QHBoxLayout(barraTitulo);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(5, 5, 5, 5);
-        horizontalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer_2);
-
         titulo = new QLabel(barraTitulo);
         titulo->setObjectName(QStringLiteral("titulo"));
 
@@ -99,11 +153,11 @@ public:
         horizontalLayout->addItem(horizontalSpacer);
 
 
-        verticalLayout->addWidget(barraTitulo);
+        verticalLayout_2->addWidget(barraTitulo);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout->addItem(verticalSpacer_2);
+        verticalLayout_2->addItem(verticalSpacer);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
@@ -116,54 +170,54 @@ public:
         formLayout->setObjectName(QStringLiteral("formLayout"));
         formLayout->setVerticalSpacing(10);
         formLayout->setContentsMargins(5, 5, 5, 5);
-        label = new QLabel(NuevoProceso);
+        label = new QLabel(page);
         label->setObjectName(QStringLiteral("label"));
 
         formLayout->setWidget(0, QFormLayout::LabelRole, label);
 
-        inicio = new QDateEdit(NuevoProceso);
+        inicio = new QDateEdit(page);
         inicio->setObjectName(QStringLiteral("inicio"));
         inicio->setMinimumSize(QSize(100, 0));
 
         formLayout->setWidget(0, QFormLayout::FieldRole, inicio);
 
-        label_2 = new QLabel(NuevoProceso);
+        label_2 = new QLabel(page);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setMinimumSize(QSize(150, 0));
 
         formLayout->setWidget(1, QFormLayout::LabelRole, label_2);
 
-        cierre = new QDateEdit(NuevoProceso);
+        cierre = new QDateEdit(page);
         cierre->setObjectName(QStringLiteral("cierre"));
 
         formLayout->setWidget(1, QFormLayout::FieldRole, cierre);
 
-        label_3 = new QLabel(NuevoProceso);
+        label_3 = new QLabel(page);
         label_3->setObjectName(QStringLiteral("label_3"));
 
         formLayout->setWidget(2, QFormLayout::LabelRole, label_3);
 
-        votacion = new QDateEdit(NuevoProceso);
+        votacion = new QDateEdit(page);
         votacion->setObjectName(QStringLiteral("votacion"));
 
         formLayout->setWidget(2, QFormLayout::FieldRole, votacion);
 
-        label_4 = new QLabel(NuevoProceso);
+        label_4 = new QLabel(page);
         label_4->setObjectName(QStringLiteral("label_4"));
 
         formLayout->setWidget(3, QFormLayout::LabelRole, label_4);
 
-        h_inicio = new QTimeEdit(NuevoProceso);
+        h_inicio = new QTimeEdit(page);
         h_inicio->setObjectName(QStringLiteral("h_inicio"));
 
         formLayout->setWidget(3, QFormLayout::FieldRole, h_inicio);
 
-        label_5 = new QLabel(NuevoProceso);
+        label_5 = new QLabel(page);
         label_5->setObjectName(QStringLiteral("label_5"));
 
         formLayout->setWidget(4, QFormLayout::LabelRole, label_5);
 
-        h_fin = new QTimeEdit(NuevoProceso);
+        h_fin = new QTimeEdit(page);
         h_fin->setObjectName(QStringLiteral("h_fin"));
 
         formLayout->setWidget(4, QFormLayout::FieldRole, h_fin);
@@ -176,11 +230,11 @@ public:
         horizontalLayout_2->addItem(horizontalSpacer_4);
 
 
-        verticalLayout->addLayout(horizontalLayout_2);
+        verticalLayout_2->addLayout(horizontalLayout_2);
 
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout->addItem(verticalSpacer_3);
+        verticalLayout_2->addItem(verticalSpacer_2);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
@@ -189,7 +243,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_5);
 
-        aceptar = new QPushButton(NuevoProceso);
+        aceptar = new QPushButton(page);
         aceptar->setObjectName(QStringLiteral("aceptar"));
         aceptar->setMinimumSize(QSize(120, 0));
 
@@ -199,7 +253,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_7);
 
-        cancelar = new QPushButton(NuevoProceso);
+        cancelar = new QPushButton(page);
         cancelar->setObjectName(QStringLiteral("cancelar"));
         cancelar->setMinimumSize(QSize(120, 0));
 
@@ -210,14 +264,240 @@ public:
         horizontalLayout_3->addItem(horizontalSpacer_6);
 
 
-        verticalLayout->addLayout(horizontalLayout_3);
+        verticalLayout_2->addLayout(horizontalLayout_3);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        stackedWidget->addWidget(page);
+        page_2 = new QWidget();
+        page_2->setObjectName(QStringLiteral("page_2"));
+        verticalLayout_4 = new QVBoxLayout(page_2);
+        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        barraTitulo_2 = new QWidget(page_2);
+        barraTitulo_2->setObjectName(QStringLiteral("barraTitulo_2"));
+        horizontalLayout_4 = new QHBoxLayout(barraTitulo_2);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(5, 5, 5, 5);
+        pushButton = new QPushButton(barraTitulo_2);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
 
-        verticalLayout->addItem(verticalSpacer);
+        horizontalLayout_4->addWidget(pushButton);
+
+        titulo_2 = new QLabel(barraTitulo_2);
+        titulo_2->setObjectName(QStringLiteral("titulo_2"));
+
+        horizontalLayout_4->addWidget(titulo_2);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_9);
+
+
+        verticalLayout_4->addWidget(barraTitulo_2);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_3);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        tableView = new QTableView(page_2);
+        tableView->setObjectName(QStringLiteral("tableView"));
+
+        horizontalLayout_5->addWidget(tableView);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_5);
+
+
+        verticalLayout_4->addLayout(verticalLayout_3);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_4);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+        horizontalLayout_6->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer_8);
+
+        aceptar_2 = new QPushButton(page_2);
+        aceptar_2->setObjectName(QStringLiteral("aceptar_2"));
+        aceptar_2->setMinimumSize(QSize(120, 0));
+
+        horizontalLayout_6->addWidget(aceptar_2);
+
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer_10);
+
+        cancelar_2 = new QPushButton(page_2);
+        cancelar_2->setObjectName(QStringLiteral("cancelar_2"));
+        cancelar_2->setMinimumSize(QSize(120, 0));
+
+        horizontalLayout_6->addWidget(cancelar_2);
+
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer_11);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_6);
+
+        stackedWidget->addWidget(page_2);
+        page_3 = new QWidget();
+        page_3->setObjectName(QStringLiteral("page_3"));
+        verticalLayout_5 = new QVBoxLayout(page_3);
+        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        barraTitulo_3 = new QWidget(page_3);
+        barraTitulo_3->setObjectName(QStringLiteral("barraTitulo_3"));
+        horizontalLayout_7 = new QHBoxLayout(barraTitulo_3);
+        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
+        horizontalLayout_7->setContentsMargins(5, 5, 5, 5);
+        titulo_3 = new QLabel(barraTitulo_3);
+        titulo_3->setObjectName(QStringLiteral("titulo_3"));
+
+        horizontalLayout_7->addWidget(titulo_3);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_2);
+
+
+        verticalLayout_5->addWidget(barraTitulo_3);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_5);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
+        horizontalLayout_9->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_15);
+
+        formLayout_2 = new QFormLayout();
+        formLayout_2->setObjectName(QStringLiteral("formLayout_2"));
+        formLayout_2->setVerticalSpacing(10);
+        formLayout_2->setContentsMargins(5, 5, 5, 5);
+        label_6 = new QLabel(page_3);
+        label_6->setObjectName(QStringLiteral("label_6"));
+
+        formLayout_2->setWidget(0, QFormLayout::LabelRole, label_6);
+
+        inicio_2 = new QDateEdit(page_3);
+        inicio_2->setObjectName(QStringLiteral("inicio_2"));
+        inicio_2->setMinimumSize(QSize(100, 0));
+
+        formLayout_2->setWidget(0, QFormLayout::FieldRole, inicio_2);
+
+        label_7 = new QLabel(page_3);
+        label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setMinimumSize(QSize(150, 0));
+
+        formLayout_2->setWidget(1, QFormLayout::LabelRole, label_7);
+
+        cierre_2 = new QDateEdit(page_3);
+        cierre_2->setObjectName(QStringLiteral("cierre_2"));
+
+        formLayout_2->setWidget(1, QFormLayout::FieldRole, cierre_2);
+
+        label_8 = new QLabel(page_3);
+        label_8->setObjectName(QStringLiteral("label_8"));
+
+        formLayout_2->setWidget(2, QFormLayout::LabelRole, label_8);
+
+        votacion_2 = new QDateEdit(page_3);
+        votacion_2->setObjectName(QStringLiteral("votacion_2"));
+
+        formLayout_2->setWidget(2, QFormLayout::FieldRole, votacion_2);
+
+        label_9 = new QLabel(page_3);
+        label_9->setObjectName(QStringLiteral("label_9"));
+
+        formLayout_2->setWidget(3, QFormLayout::LabelRole, label_9);
+
+        h_inicio_2 = new QTimeEdit(page_3);
+        h_inicio_2->setObjectName(QStringLiteral("h_inicio_2"));
+
+        formLayout_2->setWidget(3, QFormLayout::FieldRole, h_inicio_2);
+
+        label_10 = new QLabel(page_3);
+        label_10->setObjectName(QStringLiteral("label_10"));
+
+        formLayout_2->setWidget(4, QFormLayout::LabelRole, label_10);
+
+        h_fin_2 = new QTimeEdit(page_3);
+        h_fin_2->setObjectName(QStringLiteral("h_fin_2"));
+
+        formLayout_2->setWidget(4, QFormLayout::FieldRole, h_fin_2);
+
+
+        horizontalLayout_9->addLayout(formLayout_2);
+
+        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_16);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_9);
+
+        verticalSpacer_6 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_6);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        horizontalLayout_8->setContentsMargins(5, 5, 5, 5);
+        horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_12);
+
+        aceptar_3 = new QPushButton(page_3);
+        aceptar_3->setObjectName(QStringLiteral("aceptar_3"));
+        aceptar_3->setMinimumSize(QSize(120, 0));
+
+        horizontalLayout_8->addWidget(aceptar_3);
+
+        horizontalSpacer_17 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_17);
+
+        pushButton_2 = new QPushButton(page_3);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setMinimumSize(QSize(120, 0));
+
+        horizontalLayout_8->addWidget(pushButton_2);
+
+        horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_13);
+
+        cancelar_3 = new QPushButton(page_3);
+        cancelar_3->setObjectName(QStringLiteral("cancelar_3"));
+        cancelar_3->setMinimumSize(QSize(120, 0));
+
+        horizontalLayout_8->addWidget(cancelar_3);
+
+        horizontalSpacer_14 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_14);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_8);
+
+        stackedWidget->addWidget(page_3);
+
+        verticalLayout->addWidget(stackedWidget);
 
 
         retranslateUi(NuevoProceso);
+
+        stackedWidget->setCurrentIndex(2);
+
 
         QMetaObject::connectSlotsByName(NuevoProceso);
     } // setupUi
@@ -233,6 +513,19 @@ public:
         label_5->setText(QApplication::translate("NuevoProceso", "Hora de fin:", nullptr));
         aceptar->setText(QApplication::translate("NuevoProceso", "Aceptar", nullptr));
         cancelar->setText(QApplication::translate("NuevoProceso", "Cancelar", nullptr));
+        pushButton->setText(QString());
+        titulo_2->setText(QApplication::translate("NuevoProceso", "Candidatos registrados", nullptr));
+        aceptar_2->setText(QApplication::translate("NuevoProceso", "Terminado", nullptr));
+        cancelar_2->setText(QApplication::translate("NuevoProceso", "Cancelar", nullptr));
+        titulo_3->setText(QApplication::translate("NuevoProceso", "Inspeccionar proceso", nullptr));
+        label_6->setText(QApplication::translate("NuevoProceso", "Inicio del proceso:", nullptr));
+        label_7->setText(QApplication::translate("NuevoProceso", "Cierre de campa\303\261as:", nullptr));
+        label_8->setText(QApplication::translate("NuevoProceso", "D\303\255a de la votaci\303\263n:", nullptr));
+        label_9->setText(QApplication::translate("NuevoProceso", "Hora de inico:", nullptr));
+        label_10->setText(QApplication::translate("NuevoProceso", "Hora de fin:", nullptr));
+        aceptar_3->setText(QApplication::translate("NuevoProceso", "Aceptar", nullptr));
+        pushButton_2->setText(QApplication::translate("NuevoProceso", "Modificar", nullptr));
+        cancelar_3->setText(QApplication::translate("NuevoProceso", "Cancelar", nullptr));
     } // retranslateUi
 
 };
