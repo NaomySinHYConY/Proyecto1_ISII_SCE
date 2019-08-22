@@ -52,7 +52,7 @@ background-color: rgb(255, 255, 255);
 #labelDatos, #labelNombre, #labelPartido, #etiquetaNombreCand, #etiquetaPartidoAfi, #Administrador{
 	font: 16pt &quot;Lato&quot;;
 }
-#AdmIcono{
+#AdmIcono, #AdmIcono_6{
 background-color: rgba(199, 189, 222,150);
 border: none;
 border-radius: 1px;
@@ -76,7 +76,9 @@ font: 12pt &quot;Lato&quot;;
 #SCE{
 font: 24pt &quot;Lato&quot;;
 }
-#botonNuevoProceso{
+#botonNuevoProceso, #botonInspeccionar, #botonVerUsuarios,
+#botonModerar
+{
 font: 18pt &quot;Lato&quot;;
 }</string>
   </property>
@@ -126,7 +128,7 @@ font: 18pt &quot;Lato&quot;;
          <bool>true</bool>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="login">
          <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -774,7 +776,7 @@ font: 18pt &quot;Lato&quot;;
                 <property name="font">
                  <font>
                   <family>Lato</family>
-                  <pointsize>12</pointsize>
+                  <pointsize>18</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -851,7 +853,7 @@ font: 18pt &quot;Lato&quot;;
                 <property name="font">
                  <font>
                   <family>Lato</family>
-                  <pointsize>12</pointsize>
+                  <pointsize>18</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -886,7 +888,7 @@ font: 18pt &quot;Lato&quot;;
                 <property name="font">
                  <font>
                   <family>Lato</family>
-                  <pointsize>12</pointsize>
+                  <pointsize>18</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -913,13 +915,6 @@ font: 18pt &quot;Lato&quot;;
              </layout>
             </item>
            </layout>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton">
-            <property name="text">
-             <string>PushButton</string>
-            </property>
-           </widget>
           </item>
           <item>
            <spacer name="verticalSpacer_5">
@@ -993,7 +988,7 @@ font: 18pt &quot;Lato&quot;;
                 </size>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
               </widget>
              </item>
@@ -1039,6 +1034,13 @@ font: 18pt &quot;Lato&quot;;
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_27">
+               <item>
+                <widget class="QWidget" name="ImgCandidato" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_14"/>
+                </widget>
+               </item>
+              </layout>
              </widget>
             </item>
             <item>
@@ -1183,7 +1185,14 @@ font: 18pt &quot;Lato&quot;;
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_22">
             <item>
-             <widget class="QTableView" name="tableView_4"/>
+             <widget class="QTableView" name="tableView_4">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>300</height>
+               </size>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>

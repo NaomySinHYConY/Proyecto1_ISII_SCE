@@ -7,6 +7,7 @@ NuevoProceso::NuevoProceso(QWidget *parent) :
     ui(new Ui::NuevoProceso)
 {
     ui->setupUi(this);
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
 NuevoProceso::~NuevoProceso()

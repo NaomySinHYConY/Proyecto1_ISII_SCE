@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     ui->Fondo->setCurrentIndex(0);
+    QPixmap pix("C:/Users/Img/pri.png");
+    //ui->ImgCandidato->setPixmap(pix);
 
     mDatabase = QSqlDatabase::addDatabase("QODBC");
     mDatabase.setHostName("127.0.0.1");
