@@ -40,19 +40,18 @@ padding-right: 5px;
 padding-bottom: 5px;
 padding-left: 5px;
 background-color: rgba(199, 189, 222,150);
-font: &quot;Lato&quot;;
+font: 12pt &quot;Lato&quot;;
 }
-QPushButton:hover{
+QPushButton:hover, #botonSalir:hover{
 background-color: rgb(199, 189, 222);
 }
-QPushButton:pressed{
+QPushButton:pressed, #botonSalir:pressed{
 background-color: rgb(255, 255, 255);
 }
 
-#labelDatos, #labelNombre, #labelPartido, #etiquetaNombreCand, #etiquetaPartidoAfil{
-font: 16pt &quot;MS Shell Dlg 2&quot;;
+#labelDatos, #labelNombre, #labelPartido, #etiquetaNombreCand, #etiquetaPartidoAfi, #Administrador{
+	font: 16pt &quot;Lato&quot;;
 }
-
 #AdmIcono{
 background-color: rgba(199, 189, 222,150);
 border: none;
@@ -61,6 +60,24 @@ padding-top: 1px;
 padding-right: 1px;
 padding-bottom: 1px;
 padding-left: 1px;
+font: 87 20pt &quot;Font Awesome 5 Free Solid&quot;;
+}
+
+#botonSalir{
+padding-top: 1px;
+padding-right: 1px;
+padding-bottom: 1px;
+padding-left: 1px;
+font: 87 20pt &quot;Font Awesome 5 Free Solid&quot;;
+}
+QLabel{
+font: 12pt &quot;Lato&quot;;
+}
+#SCE{
+font: 24pt &quot;Lato&quot;;
+}
+#botonNuevoProceso{
+font: 18pt &quot;Lato&quot;;
 }</string>
   </property>
   <property name="iconSize">
@@ -168,7 +185,7 @@ padding-left: 1px;
                 </spacer>
                </item>
                <item>
-                <widget class="QLabel" name="label">
+                <widget class="QLabel" name="SCE">
                  <property name="font">
                   <font>
                    <family>Lato</family>
@@ -468,8 +485,10 @@ padding-left: 1px;
                 <property name="font">
                  <font>
                   <family>Lato</family>
-                  <pointsize>10</pointsize>
-                  <underline>true</underline>
+                  <pointsize>12</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -570,7 +589,11 @@ padding-left: 1px;
                </property>
                <property name="font">
                 <font>
-                 <pointsize>22</pointsize>
+                 <family>Font Awesome 5 Free Solid</family>
+                 <pointsize>20</pointsize>
+                 <weight>10</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="text">
@@ -579,7 +602,7 @@ padding-left: 1px;
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_4">
+              <widget class="QLabel" name="Administrador">
                <property name="font">
                 <font>
                  <family>Lato</family>
@@ -618,10 +641,35 @@ padding-left: 1px;
                  <height>50</height>
                 </size>
                </property>
+               <property name="font">
+                <font>
+                 <family>Font Awesome 5 Free Solid</family>
+                 <pointsize>20</pointsize>
+                 <weight>10</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
               </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_39">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>
@@ -691,11 +739,14 @@ padding-left: 1px;
                 <property name="font">
                  <font>
                   <family>Lato</family>
-                  <pointsize>16</pointsize>
+                  <pointsize>18</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
-                 <string>Nuevo proceso electoral</string>
+                 <string> Nuevo proceso electoral</string>
                 </property>
                </widget>
               </item>
@@ -723,7 +774,10 @@ padding-left: 1px;
                 <property name="font">
                  <font>
                   <family>Lato</family>
-                  <pointsize>16</pointsize>
+                  <pointsize>12</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -796,7 +850,11 @@ padding-left: 1px;
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>16</pointsize>
+                  <family>Lato</family>
+                  <pointsize>12</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -827,7 +885,11 @@ padding-left: 1px;
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>16</pointsize>
+                  <family>Lato</family>
+                  <pointsize>12</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -851,6 +913,13 @@ padding-left: 1px;
              </layout>
             </item>
            </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
           </item>
           <item>
            <spacer name="verticalSpacer_5">
@@ -933,7 +1002,10 @@ padding-left: 1px;
                <property name="font">
                 <font>
                  <family>Lato</family>
-                 <pointsize>16</pointsize>
+                 <pointsize>12</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="text">
@@ -1046,7 +1118,10 @@ padding-left: 1px;
                <property name="font">
                 <font>
                  <family>Lato</family>
-                 <pointsize>16</pointsize>
+                 <pointsize>12</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="text">
@@ -1180,7 +1255,10 @@ padding-left: 1px;
                <property name="font">
                 <font>
                  <family>Lato</family>
-                 <pointsize>16</pointsize>
+                 <pointsize>12</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="text">
@@ -1404,7 +1482,10 @@ padding-left: 1px;
                <property name="font">
                 <font>
                  <family>Lato</family>
-                 <pointsize>16</pointsize>
+                 <pointsize>12</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="text">
@@ -1588,7 +1669,10 @@ padding-left: 1px;
                <property name="font">
                 <font>
                  <family>Lato</family>
-                 <pointsize>16</pointsize>
+                 <pointsize>12</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="text">
@@ -1864,7 +1948,10 @@ padding-left: 1px;
                <property name="font">
                 <font>
                  <family>Lato</family>
-                 <pointsize>16</pointsize>
+                 <pointsize>12</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="text">

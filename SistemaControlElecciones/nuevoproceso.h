@@ -15,6 +15,9 @@ public:
     explicit NuevoProceso(QWidget *parent = nullptr);
     ~NuevoProceso();
 
+private slots:
+    void on_cancelar_clicked();
+
 private:
     Ui::NuevoProceso *ui;
 };

@@ -61,6 +61,7 @@ public:
     QSpacerItem *horizontalSpacer_7;
     QPushButton *cancelar;
     QSpacerItem *horizontalSpacer_6;
+    QSpacerItem *verticalSpacer_9;
     QWidget *candidatosRegistrados;
     QVBoxLayout *verticalLayout_4;
     QWidget *barraTitulo_2;
@@ -173,6 +174,7 @@ public:
         nuevoProceso->setObjectName(QStringLiteral("nuevoProceso"));
         verticalLayout_2 = new QVBoxLayout(nuevoProceso);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(2, 2, 2, -1);
         barraTitulo = new QWidget(nuevoProceso);
         barraTitulo->setObjectName(QStringLiteral("barraTitulo"));
         horizontalLayout = new QHBoxLayout(barraTitulo);
@@ -300,6 +302,10 @@ public:
 
 
         verticalLayout_2->addLayout(horizontalLayout_3);
+
+        verticalSpacer_9 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_9);
 
         stackedWidget->addWidget(nuevoProceso);
         candidatosRegistrados = new QWidget();

@@ -23,6 +23,8 @@ private slots:
 
     void on_botonNuevoProceso_clicked();
 
+    void on_botonSalir_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase mDatabase;

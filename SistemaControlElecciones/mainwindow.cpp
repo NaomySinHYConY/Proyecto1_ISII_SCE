@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->Fondo->setCurrentIndex(5);
+    ui->Fondo->setCurrentIndex(0);
 
     mDatabase = QSqlDatabase::addDatabase("QODBC");
     mDatabase.setHostName("127.0.0.1");
@@ -58,18 +58,25 @@ void MainWindow::on_Ingresar_clicked()
     int r = rol.value(0).toInt();
     qDebug() << contr;
 
-    if(u==usuario && c==contr){
-        if(r==1){
-            ui->Fondo->setCurrentIndex(1);
-        }else if(r==2){
-            ui->Fondo->setCurrentIndex(2);
-        }else if(r==3){
-            ui->Fondo->setCurrentIndex(3);
-        }
+    if(u.isEmpty() || c.isEmpty()){
+        QMessageBox::warning(this, "Campos vacios",
+                             "Por favor llena todos los campos","Aceptar");
+        ui->lineEditUsuario->setFocus();
     }else{
-        QMessageBox::warning(this, "Datos incorrectos",
-                                 "El nombre de usuario o la contrasegna no son correctos.",
+        if(u==usuario && c==contr){
+            if(r==1){
+                ui->Fondo->setCurrentIndex(1);
+            }else if(r==2){
+                ui->Fondo->setCurrentIndex(2);
+            }else if(r==3){
+                ui->Fondo->setCurrentIndex(3);
+            }
+        }else{
+            QMessageBox::warning(this, "Datos incorrectos",
+                                 "El nombre de usuario o la contrasena no son correctos.",
                                  "Aceptar");
+            ui->lineEditUsuario->setFocus();
+        }
     }
 }
 
@@ -77,4 +84,14 @@ void MainWindow::on_botonNuevoProceso_clicked()
 {
     NuevoProceso B;
     B.exec();
+}
+
+void MainWindow::on_botonSalir_clicked()
+{
+    bool e = QMessageBox::question(this, "Salir",
+                          "¿Está seguro de que quiere salir?",
+                          "Sí", "No");
+    if(e == 0){
+        ui->Fondo->setCurrentIndex(0);
+    }
 }
