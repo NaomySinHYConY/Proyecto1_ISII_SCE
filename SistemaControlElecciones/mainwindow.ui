@@ -1633,6 +1633,13 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;
            </widget>
           </item>
           <item>
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>Seleccione un partido para ver más información o votar por él.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="verticalSpacer_9">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -1900,6 +1907,16 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;
              </item>
             </layout>
            </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_31">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>40</number>
+            </property>
+           </layout>
           </item>
           <item>
            <spacer name="verticalSpacer_8">
