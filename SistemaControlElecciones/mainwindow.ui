@@ -47,6 +47,10 @@ background-color: rgb(199, 189, 222);
 }
 QPushButton:pressed{
 background-color: rgb(255, 255, 255);
+}
+
+#labelDatos, #labelNombre, #labelPartido, #etiquetaNombreCand, #etiquetaPartidoAfil{
+font: 16pt &quot;MS Shell Dlg 2&quot;;
 }</string>
   </property>
   <property name="iconSize">
@@ -95,7 +99,7 @@ background-color: rgb(255, 255, 255);
          <bool>true</bool>
         </property>
         <property name="currentIndex">
-         <number>6</number>
+         <number>5</number>
         </property>
         <widget class="QWidget" name="login">
          <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -953,21 +957,21 @@ background-color: rgb(255, 255, 255);
             <item>
              <layout class="QGridLayout" name="gridLayout">
               <item row="1" column="0">
-               <widget class="QLabel" name="label_11">
+               <widget class="QLabel" name="labelNombre">
                 <property name="text">
                  <string>Nombre:</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="0">
-               <widget class="QLabel" name="label_10">
+               <widget class="QLabel" name="labelDatos">
                 <property name="text">
                  <string>Datos del candidato</string>
                 </property>
                </widget>
               </item>
               <item row="2" column="0">
-               <widget class="QLabel" name="label_12">
+               <widget class="QLabel" name="labelPartido">
                 <property name="text">
                  <string>Partido de afiliación:</string>
                 </property>
@@ -1627,6 +1631,135 @@ background-color: rgb(255, 255, 255);
              </item>
             </layout>
            </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_28">
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_29">
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>../../../IS II/Proyecto_1/Documentación/Imagenes/Nueva_alianza.png</pixmap>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string>Partido Nueva Alianza</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_30">
+              <item>
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>../../../IS II/Proyecto_1/Documentación/Imagenes/PAN_party.png</pixmap>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_18">
+                <property name="text">
+                 <string>Partido Acción Nacional</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_23">
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_25">
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>../../../IS II/Proyecto_1/Documentación/Imagenes/PRD-Logo.png</pixmap>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>Partido Revolución Democrática</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_26">
+              <item>
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>../../../IS II/Proyecto_1/Documentación/Imagenes/Sin título.png</pixmap>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>Partido Revolucionario Institucional</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
           </item>
           <item>
            <spacer name="verticalSpacer_2">
