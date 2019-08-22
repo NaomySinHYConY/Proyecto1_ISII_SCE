@@ -147,7 +147,22 @@ public:
 "background: rgb(199, 189, 222);\n"
 "border: 1px solid;\n"
 "}\n"
-""));
+"QPushButton{\n"
+"border: 1px solid;\n"
+"border-radius: 5px;\n"
+"padding-top: 5px;\n"
+"padding-right: 5px;\n"
+"padding-bottom: 5px;\n"
+"padding-left: 5px;\n"
+"background-color: rgba(199, 189, 222,150);\n"
+"font: \"Lato\";\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color: rgb(199, 189, 222);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(255, 255, 255);\n"
+"}"));
         verticalLayout = new QVBoxLayout(NuevoProceso);
         verticalLayout->setSpacing(1);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));

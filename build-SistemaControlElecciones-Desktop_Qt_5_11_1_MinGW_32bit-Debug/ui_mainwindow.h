@@ -100,9 +100,9 @@ public:
     QHBoxLayout *horizontalLayout_20;
     QFrame *frame;
     QGridLayout *gridLayout;
-    QLabel *label_11;
-    QLabel *label_10;
-    QLabel *label_12;
+    QLabel *labelNombre;
+    QLabel *labelDatos;
+    QLabel *labelPartido;
     QLabel *etiquetaNombreCand;
     QLabel *etiquetaPartidoAfil;
     QWidget *barraPropuestas;
@@ -163,6 +163,22 @@ public:
     QSpacerItem *horizontalSpacer_19;
     QPushButton *botonSalir_3;
     QSpacerItem *horizontalSpacer_36;
+    QLabel *label_19;
+    QSpacerItem *verticalSpacer_9;
+    QHBoxLayout *horizontalLayout_28;
+    QHBoxLayout *horizontalLayout_29;
+    QLabel *label_15;
+    QLabel *label_16;
+    QHBoxLayout *horizontalLayout_30;
+    QLabel *label_17;
+    QLabel *label_18;
+    QHBoxLayout *horizontalLayout_23;
+    QHBoxLayout *horizontalLayout_25;
+    QLabel *label_10;
+    QLabel *label_11;
+    QHBoxLayout *horizontalLayout_26;
+    QLabel *label_12;
+    QLabel *label_14;
     QSpacerItem *verticalSpacer_2;
     QWidget *menuCandidato;
     QVBoxLayout *verticalLayout_13;
@@ -174,6 +190,7 @@ public:
     QSpacerItem *horizontalSpacer_20;
     QPushButton *botonSalir_4;
     QSpacerItem *horizontalSpacer_38;
+    QHBoxLayout *horizontalLayout_31;
     QSpacerItem *verticalSpacer_8;
 
     void setupUi(QMainWindow *MainWindow)
@@ -214,6 +231,10 @@ public:
 "}\n"
 "QPushButton:pressed{\n"
 "background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"#labelDatos, #labelNombre, #labelPartido, #etiquetaNombreCand, #etiquetaPartidoAfil{\n"
+"font: 16pt \"MS Shell Dlg 2\";\n"
 "}"));
         MainWindow->setIconSize(QSize(24, 24));
         centralWidget = new QWidget(MainWindow);
@@ -587,20 +608,20 @@ public:
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        label_11 = new QLabel(infoCandidato);
-        label_11->setObjectName(QStringLiteral("label_11"));
+        labelNombre = new QLabel(infoCandidato);
+        labelNombre->setObjectName(QStringLiteral("labelNombre"));
 
-        gridLayout->addWidget(label_11, 1, 0, 1, 1);
+        gridLayout->addWidget(labelNombre, 1, 0, 1, 1);
 
-        label_10 = new QLabel(infoCandidato);
-        label_10->setObjectName(QStringLiteral("label_10"));
+        labelDatos = new QLabel(infoCandidato);
+        labelDatos->setObjectName(QStringLiteral("labelDatos"));
 
-        gridLayout->addWidget(label_10, 0, 0, 1, 1);
+        gridLayout->addWidget(labelDatos, 0, 0, 1, 1);
 
-        label_12 = new QLabel(infoCandidato);
-        label_12->setObjectName(QStringLiteral("label_12"));
+        labelPartido = new QLabel(infoCandidato);
+        labelPartido->setObjectName(QStringLiteral("labelPartido"));
 
-        gridLayout->addWidget(label_12, 2, 0, 1, 1);
+        gridLayout->addWidget(labelPartido, 2, 0, 1, 1);
 
         etiquetaNombreCand = new QLabel(infoCandidato);
         etiquetaNombreCand->setObjectName(QStringLiteral("etiquetaNombreCand"));
@@ -915,6 +936,103 @@ public:
 
         verticalLayout_5->addWidget(barraVotante);
 
+        label_19 = new QLabel(MenuVotante);
+        label_19->setObjectName(QStringLiteral("label_19"));
+
+        verticalLayout_5->addWidget(label_19);
+
+        verticalSpacer_9 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer_9);
+
+        horizontalLayout_28 = new QHBoxLayout();
+        horizontalLayout_28->setSpacing(6);
+        horizontalLayout_28->setObjectName(QStringLiteral("horizontalLayout_28"));
+        horizontalLayout_28->setContentsMargins(-1, 0, -1, -1);
+        horizontalLayout_29 = new QHBoxLayout();
+        horizontalLayout_29->setSpacing(6);
+        horizontalLayout_29->setObjectName(QStringLiteral("horizontalLayout_29"));
+        horizontalLayout_29->setContentsMargins(-1, 0, -1, -1);
+        label_15 = new QLabel(MenuVotante);
+        label_15->setObjectName(QStringLiteral("label_15"));
+        label_15->setPixmap(QPixmap(QString::fromUtf8("../../../IS II/Proyecto_1/Documentaci\303\263n/Imagenes/Nueva_alianza.png")));
+        label_15->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_29->addWidget(label_15);
+
+        label_16 = new QLabel(MenuVotante);
+        label_16->setObjectName(QStringLiteral("label_16"));
+
+        horizontalLayout_29->addWidget(label_16);
+
+
+        horizontalLayout_28->addLayout(horizontalLayout_29);
+
+        horizontalLayout_30 = new QHBoxLayout();
+        horizontalLayout_30->setSpacing(6);
+        horizontalLayout_30->setObjectName(QStringLiteral("horizontalLayout_30"));
+        label_17 = new QLabel(MenuVotante);
+        label_17->setObjectName(QStringLiteral("label_17"));
+        label_17->setPixmap(QPixmap(QString::fromUtf8("../../../IS II/Proyecto_1/Documentaci\303\263n/Imagenes/PAN_party.png")));
+        label_17->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_30->addWidget(label_17);
+
+        label_18 = new QLabel(MenuVotante);
+        label_18->setObjectName(QStringLiteral("label_18"));
+
+        horizontalLayout_30->addWidget(label_18);
+
+
+        horizontalLayout_28->addLayout(horizontalLayout_30);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_28);
+
+        horizontalLayout_23 = new QHBoxLayout();
+        horizontalLayout_23->setSpacing(6);
+        horizontalLayout_23->setObjectName(QStringLiteral("horizontalLayout_23"));
+        horizontalLayout_23->setContentsMargins(-1, 0, -1, -1);
+        horizontalLayout_25 = new QHBoxLayout();
+        horizontalLayout_25->setSpacing(6);
+        horizontalLayout_25->setObjectName(QStringLiteral("horizontalLayout_25"));
+        horizontalLayout_25->setContentsMargins(-1, 0, -1, -1);
+        label_10 = new QLabel(MenuVotante);
+        label_10->setObjectName(QStringLiteral("label_10"));
+        label_10->setPixmap(QPixmap(QString::fromUtf8("../../../IS II/Proyecto_1/Documentaci\303\263n/Imagenes/PRD-Logo.png")));
+        label_10->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_25->addWidget(label_10);
+
+        label_11 = new QLabel(MenuVotante);
+        label_11->setObjectName(QStringLiteral("label_11"));
+
+        horizontalLayout_25->addWidget(label_11);
+
+
+        horizontalLayout_23->addLayout(horizontalLayout_25);
+
+        horizontalLayout_26 = new QHBoxLayout();
+        horizontalLayout_26->setSpacing(6);
+        horizontalLayout_26->setObjectName(QStringLiteral("horizontalLayout_26"));
+        label_12 = new QLabel(MenuVotante);
+        label_12->setObjectName(QStringLiteral("label_12"));
+        label_12->setPixmap(QPixmap(QString::fromUtf8("../../../IS II/Proyecto_1/Documentaci\303\263n/Imagenes/Sin t\303\255tulo.png")));
+        label_12->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_26->addWidget(label_12);
+
+        label_14 = new QLabel(MenuVotante);
+        label_14->setObjectName(QStringLiteral("label_14"));
+
+        horizontalLayout_26->addWidget(label_14);
+
+
+        horizontalLayout_23->addLayout(horizontalLayout_26);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_23);
+
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_5->addItem(verticalSpacer_2);
@@ -969,6 +1087,13 @@ public:
 
         verticalLayout_13->addWidget(barraCandidato);
 
+        horizontalLayout_31 = new QHBoxLayout();
+        horizontalLayout_31->setSpacing(6);
+        horizontalLayout_31->setObjectName(QStringLiteral("horizontalLayout_31"));
+        horizontalLayout_31->setContentsMargins(0, 40, -1, -1);
+
+        verticalLayout_13->addLayout(horizontalLayout_31);
+
         verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_13->addItem(verticalSpacer_8);
@@ -984,7 +1109,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        Fondo->setCurrentIndex(6);
+        Fondo->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1007,9 +1132,9 @@ public:
         botonModerar->setText(QApplication::translate("MainWindow", "Moderar publicaciones", nullptr));
         AdmIcono_6->setText(QString());
         label_9->setText(QApplication::translate("MainWindow", "Informaci\303\263n del candidato", nullptr));
-        label_11->setText(QApplication::translate("MainWindow", "Nombre:", nullptr));
-        label_10->setText(QApplication::translate("MainWindow", "Datos del candidato", nullptr));
-        label_12->setText(QApplication::translate("MainWindow", "Partido de afiliaci\303\263n:", nullptr));
+        labelNombre->setText(QApplication::translate("MainWindow", "Nombre:", nullptr));
+        labelDatos->setText(QApplication::translate("MainWindow", "Datos del candidato", nullptr));
+        labelPartido->setText(QApplication::translate("MainWindow", "Partido de afiliaci\303\263n:", nullptr));
         etiquetaNombreCand->setText(QApplication::translate("MainWindow", "Info", nullptr));
         etiquetaPartidoAfil->setText(QApplication::translate("MainWindow", "Info", nullptr));
         label_13->setText(QApplication::translate("MainWindow", "Propuestas", nullptr));
@@ -1027,6 +1152,15 @@ public:
         AdmIcono_3->setText(QString());
         label_6->setText(QApplication::translate("MainWindow", "Votante", nullptr));
         botonSalir_3->setText(QString());
+        label_19->setText(QApplication::translate("MainWindow", "Seleccione un partido para ver m\303\241s informaci\303\263n o votar por \303\251l.", nullptr));
+        label_15->setText(QString());
+        label_16->setText(QApplication::translate("MainWindow", "Partido Nueva Alianza", nullptr));
+        label_17->setText(QString());
+        label_18->setText(QApplication::translate("MainWindow", "Partido Acci\303\263n Nacional", nullptr));
+        label_10->setText(QString());
+        label_11->setText(QApplication::translate("MainWindow", "Partido Revoluci\303\263n Democr\303\241tica", nullptr));
+        label_12->setText(QString());
+        label_14->setText(QApplication::translate("MainWindow", "Partido Revolucionario Institucional", nullptr));
         AdmIcono_4->setText(QString());
         label_7->setText(QApplication::translate("MainWindow", "Candidato", nullptr));
         botonSalir_4->setText(QString());

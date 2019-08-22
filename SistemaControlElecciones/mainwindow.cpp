@@ -10,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->Fondo->setCurrentIndex(5);
+
     mDatabase = QSqlDatabase::addDatabase("QODBC");
     mDatabase.setHostName("127.0.0.1");
     mDatabase.setPort(3306);
@@ -56,10 +58,17 @@ void MainWindow::on_Ingresar_clicked()
     int r = rol.value(0).toInt();
     qDebug() << contr;
 
-    if(u==usuario && c==contr && r==1){
-        ui->Fondo->setCurrentIndex(1);
+    if(u==usuario && c==contr){
+        if(r==1){
+            ui->Fondo->setCurrentIndex(1);
+        }else if(r==2){
+            ui->Fondo->setCurrentIndex(2);
+        }else if(r==3){
+            ui->Fondo->setCurrentIndex(3);
+        }
     }else{
-        QMessageBox::information(this, "Incorrecta", "Incorrecta",
+        QMessageBox::warning(this, "Datos incorrectos",
+                                 "El nombre de usuario o la contrasegna no son correctos.",
                                  "Aceptar");
     }
 }

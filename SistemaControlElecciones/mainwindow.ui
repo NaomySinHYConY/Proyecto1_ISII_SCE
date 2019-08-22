@@ -51,6 +51,16 @@ background-color: rgb(255, 255, 255);
 
 #labelDatos, #labelNombre, #labelPartido, #etiquetaNombreCand, #etiquetaPartidoAfil{
 font: 16pt &quot;MS Shell Dlg 2&quot;;
+}
+
+#AdmIcono{
+background-color: rgba(199, 189, 222,150);
+border: none;
+border-radius: 1px;
+padding-top: 1px;
+padding-right: 1px;
+padding-bottom: 1px;
+padding-left: 1px;
 }</string>
   </property>
   <property name="iconSize">
@@ -99,7 +109,7 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;
          <bool>true</bool>
         </property>
         <property name="currentIndex">
-         <number>5</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="login">
          <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -544,7 +554,7 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;
              <item>
               <widget class="QPushButton" name="AdmIcono">
                <property name="enabled">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <property name="minimumSize">
                 <size>
@@ -558,8 +568,13 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;
                  <height>50</height>
                 </size>
                </property>
+               <property name="font">
+                <font>
+                 <pointsize>22</pointsize>
+                </font>
+               </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
               </widget>
              </item>
